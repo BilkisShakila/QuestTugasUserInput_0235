@@ -36,3 +36,19 @@ fun BiodataScreen() {
     var showDatePicker by remember { mutableStateOf(false) }
     var expanded by remember { mutableStateOf(false) }
     var showResult by remember { mutableStateOf(false) }
+
+
+    val skillOptions = listOf(R.string.skill_android, R.string.skill_uiux, R.string.skill_web)
+    val experienceOptions = stringArrayResource(R.array.experience_options)
+    val dateFormat = stringResource(R.string.date_format)
+
+    val isFormValid = firstName.isNotBlank() && lastName.isNotBlank() &&
+            email.isNotBlank() && birthDate.isNotBlank() &&
+            experience.isNotBlank() && selectedSkills.isNotEmpty()
+
+    val fieldShape = RoundedCornerShape(dimensionResource(R.dimen.field_corner))
+    val fieldColors = OutlinedTextFieldDefaults.colors(
+        focusedBorderColor = colorResource(R.color.purple_title),
+        unfocusedBorderColor = colorResource(R.color.gray_border),
+        disabledBorderColor = colorResource(R.color.gray_border)
+    )
