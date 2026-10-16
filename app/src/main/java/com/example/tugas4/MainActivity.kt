@@ -19,3 +19,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+@Preview(showBackground = true)
+@Composable
+fun BiodataScreenPreview() {
+    Tugas4Theme {
+        BiodataScreen()
+    }
+}
