@@ -240,6 +240,17 @@ fun BiodataScreen() {
             }
         ) { DatePicker(state = datePickerState) }
     }
+    // Dialog hasil
+    if (showResult) {
+        val skillNames = selectedSkills.map { stringResource(it) }
+        val skillText = skillNames.joinToString(stringResource(R.string.skill_separator))
+        val dialogDuration = integerResource(R.integer.result_dialog_duration_ms).toLong()
+
+        LaunchedEffect(Unit) {
+            delay(dialogDuration)
+            showResult = false
+        }
+
 
 
 
