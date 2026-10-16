@@ -22,3 +22,17 @@ import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 import java.util.Date
 import java.util.Locale
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun BiodataScreen() {
+    var firstName by rememberSaveable { mutableStateOf("") }
+    var lastName by rememberSaveable { mutableStateOf("") }
+    var email by rememberSaveable { mutableStateOf("") }
+    var birthDate by rememberSaveable { mutableStateOf("") }
+    var experience by rememberSaveable { mutableStateOf("") }
+    var selectedSkills by rememberSaveable { mutableStateOf(listOf<Int>()) }
+
+    var showDatePicker by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(false) }
+    var showResult by remember { mutableStateOf(false) }
