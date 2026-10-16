@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">tugas4</string>
-</resources>
+    <string name="app_name">QuestTugasUserInput</string>
+    <string name="form_title">Form Biodata</string>
+    <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="hint_first_name">Nama Depan</string>
+    <string name="hint_last_name">Nama Belakang</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_birthdate">Tgl Lahir</string>
+    <string name="hint_experience">Experience</string>
+    <string name="label_skill">Pilih Skill Anda :</string>
+    <string name="skill_android">Android</string>
+    <string name="skill_uiux">UI/UX</string>
+    <string name="skill_web">Web</string>
+    <string name="btn_proceed">Proceed</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="cd_background">Background neon laba-laba</string>
+    <string name="cd_calendar">Pilih tanggal</string>
