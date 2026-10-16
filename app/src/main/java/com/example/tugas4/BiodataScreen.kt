@@ -78,3 +78,20 @@ fun BiodataScreen() {
                     )
                     .background(colorResource(R.color.white))
             ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(dimensionResource(R.dimen.screen_padding)),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = stringResource(R.string.form_title),
+                        color = colorResource(R.color.purple_title),
+                        fontSize = dimensionResource(R.dimen.title_size).value.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+
+
+
+
