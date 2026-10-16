@@ -91,6 +91,13 @@ fun BiodataScreen() {
                         fontSize = dimensionResource(R.dimen.title_size).value.sp,
                         fontWeight = FontWeight.Bold
                     )
+                    Spacer(Modifier.height(dimensionResource(R.dimen.field_spacing) / 2))
+                    Text(
+                        text = stringResource(R.string.form_subtitle),
+                        color = colorResource(R.color.gray_subtitle),
+                        fontSize = dimensionResource(R.dimen.subtitle_size).value.sp,
+                        textAlign = TextAlign.Center
+                    )
 
 
 
