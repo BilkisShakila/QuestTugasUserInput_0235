@@ -52,3 +52,16 @@ fun BiodataScreen() {
         unfocusedBorderColor = colorResource(R.color.gray_border),
         disabledBorderColor = colorResource(R.color.gray_border)
     )
+
+    Scaffold { innerPadding ->
+        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+
+            // Gambar header
+            Image(
+                painter = painterResource(R.drawable.wallpaper),
+                contentDescription = stringResource(R.string.cd_background),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.header_height))
+            )
