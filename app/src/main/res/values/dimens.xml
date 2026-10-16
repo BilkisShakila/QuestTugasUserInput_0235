@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="header_height">260dp</dimen>
+    <dimen name="card_top_offset">200dp</dimen>
+    <dimen name="card_corner">32dp</dimen>
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="field_height">56dp</dimen>
+    <dimen name="field_corner">20dp</dimen>
+    <dimen name="field_spacing">16dp</dimen>
+    <dimen name="section_spacing">24dp</dimen>
