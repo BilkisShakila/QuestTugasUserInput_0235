@@ -98,6 +98,18 @@ fun BiodataScreen() {
                         fontSize = dimensionResource(R.dimen.subtitle_size).value.sp,
                         textAlign = TextAlign.Center
                     )
+                    Spacer(Modifier.height(dimensionResource(R.dimen.section_spacing)))
+
+                    // Nama Depan & Belakang
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))) {
+                        OutlinedTextField(
+                            value = firstName, onValueChange = { firstName = it },
+                            placeholder = { Text(stringResource(R.string.hint_first_name)) },
+                            singleLine = true, shape = fieldShape, colors = fieldColors,
+                            modifier = Modifier.weight(1f).heightIn(min = dimensionResource(R.dimen.field_height))
+                        )
+
+
 
 
 
