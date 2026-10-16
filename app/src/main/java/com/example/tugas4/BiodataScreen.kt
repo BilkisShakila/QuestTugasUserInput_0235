@@ -250,6 +250,27 @@ fun BiodataScreen() {
             delay(dialogDuration)
             showResult = false
         }
+        AlertDialog(
+            onDismissRequest = { showResult = false },
+            title = { Text(stringResource(R.string.dialog_title)) },
+            text = {
+                Column {
+                    Text(stringResource(R.string.result_name, firstName, lastName))
+                    Text(stringResource(R.string.result_email, email))
+                    Text(stringResource(R.string.result_birthdate, birthDate))
+                    Text(stringResource(R.string.result_experience, experience))
+                    Text(stringResource(R.string.result_skill, skillText))
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showResult = false }) {
+                    Text(stringResource(R.string.btn_ok))
+                }
+            }
+        )
+    }
+}
+
 
 
 
