@@ -222,6 +222,25 @@ fun BiodataScreen() {
             }
         }
     }
+    // Dialog tanggal
+    if (showDatePicker) {
+        val datePickerState = rememberDatePickerState()
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    datePickerState.selectedDateMillis?.let {
+                        birthDate = SimpleDateFormat(dateFormat, Locale.getDefault()).format(Date(it))
+                    }
+                    showDatePicker = false
+                }) { Text(stringResource(R.string.btn_ok)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) { Text(stringResource(R.string.btn_cancel)) }
+            }
+        ) { DatePicker(state = datePickerState) }
+    }
+
 
 
 
