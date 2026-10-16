@@ -124,6 +124,54 @@ fun BiodataScreen() {
                         singleLine = true, shape = fieldShape, colors = fieldColors,
                         modifier = Modifier.fillMaxWidth().heightIn(min = dimensionResource(R.dimen.field_height))
                     )
+                    Spacer(Modifier.height(dimensionResource(R.dimen.field_spacing)))
+
+                    // Tgl Lahir & Experience
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.field_spacing))) {
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedTextField(
+                                value = birthDate, onValueChange = {}, readOnly = true,
+                                placeholder = { Text(stringResource(R.string.hint_birthdate)) },
+                                trailingIcon = {
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_calendar),
+                                        contentDescription = stringResource(R.string.cd_calendar)
+                                    )
+                                },
+                                singleLine = true, shape = fieldShape, colors = fieldColors,
+                                modifier = Modifier.fillMaxWidth().heightIn(min = dimensionResource(R.dimen.field_height))
+                            )
+                            // Layer transparan agar seluruh field bisa diklik
+                            Box(Modifier.matchParentSize().clickable { showDatePicker = true })
+                        }
+
+                        ExposedDropdownMenuBox(
+                            expanded = expanded,
+                            onExpandedChange = { expanded = it },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            OutlinedTextField(
+                                value = experience, onValueChange = {}, readOnly = true,
+                                placeholder = { Text(stringResource(R.string.hint_experience)) },
+                                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded) },
+                                singleLine = true, shape = fieldShape, colors = fieldColors,
+                                modifier = Modifier
+                                    .menuAnchor()
+                                    .fillMaxWidth()
+                                    .heightIn(min = dimensionResource(R.dimen.field_height))
+                            )
+                            ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                                experienceOptions.forEach { option ->
+                                    DropdownMenuItem(
+                                        text = { Text(option) },
+                                        onClick = { experience = option; expanded = false }
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+
 
 
 
