@@ -170,7 +170,38 @@ fun BiodataScreen() {
                             }
                         }
                     }
-                    
+                    Spacer(Modifier.height(dimensionResource(R.dimen.section_spacing)))
+
+                    // Skill
+                    Text(
+                        text = stringResource(R.string.label_skill),
+                        color = colorResource(R.color.black_label),
+                        fontSize = dimensionResource(R.dimen.label_size).value.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        skillOptions.forEach { skillRes ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Checkbox(
+                                    checked = skillRes in selectedSkills,
+                                    onCheckedChange = { checked ->
+                                        selectedSkills = if (checked) selectedSkills + skillRes
+                                        else selectedSkills - skillRes
+                                    }
+                                )
+                                Text(
+                                    text = stringResource(skillRes),
+                                    fontSize = dimensionResource(R.dimen.skill_text_size).value.sp
+                                )
+                            }
+                        }
+                    }
+
 
 
 
