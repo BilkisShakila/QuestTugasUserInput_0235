@@ -115,6 +115,15 @@ fun BiodataScreen() {
                             modifier = Modifier.weight(1f).heightIn(min = dimensionResource(R.dimen.field_height))
                         )
                     }
+                    Spacer(Modifier.height(dimensionResource(R.dimen.field_spacing)))
+
+                    // Email
+                    OutlinedTextField(
+                        value = email, onValueChange = { email = it },
+                        placeholder = { Text(stringResource(R.string.hint_email)) },
+                        singleLine = true, shape = fieldShape, colors = fieldColors,
+                        modifier = Modifier.fillMaxWidth().heightIn(min = dimensionResource(R.dimen.field_height))
+                    )
 
 
 
