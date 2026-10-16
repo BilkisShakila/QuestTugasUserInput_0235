@@ -108,6 +108,13 @@ fun BiodataScreen() {
                             singleLine = true, shape = fieldShape, colors = fieldColors,
                             modifier = Modifier.weight(1f).heightIn(min = dimensionResource(R.dimen.field_height))
                         )
+                        OutlinedTextField(
+                            value = lastName, onValueChange = { lastName = it },
+                            placeholder = { Text(stringResource(R.string.hint_last_name)) },
+                            singleLine = true, shape = fieldShape, colors = fieldColors,
+                            modifier = Modifier.weight(1f).heightIn(min = dimensionResource(R.dimen.field_height))
+                        )
+                    }
 
 
 
